@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer box */
+.outer-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Inner card */
+.inner-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.signup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.signup-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.signup-header hr {
+  margin: 10px auto;
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #eee;
+}
+
+/* Form body */
+.signup-body p {
+  margin: 15px 0;
+}
+
+.signup-body label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.signup-body input[type="text"],
+.signup-body input[type="email"],
+.signup-body input[type="password"],
+.signup-body select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.signup-body input:focus,
+.signup-body select:focus {
+  border-color: #2575fc;
+  box-shadow: 0px 0px 6px rgba(37, 117, 252, 0.3);
+}
+
+/* Radio & checkbox groups */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.input-group label {
+  font-weight: normal;
+  color: #444;
+}
+
+/* Submit button */
+#submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}

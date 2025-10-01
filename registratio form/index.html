@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <header class="signup-header">
+                <h1>Registration🙌</h1>
+                <hr>
+                <p>It just takes 30 seconds</p>
+            </header>  
+
+            <main class="signup-body">
+                <form id="signup-form" action="#">
+                    <p>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter full name" required />
+                    </p>
+
+                    <p>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="@gmail.com" required />
+                    </p>
+
+                    <p>
+                        <label for="password">Your New Password</label>
+                        <input type="password" id="password" placeholder="At least 8 characters" required />
+                    </p>
+
+                    <p>
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Repeat password" required />
+                    </p>
+
+                    <p>
+                        <label>Gender:</label>
+                        <div class="input-group">
+                            <input type="radio" name="gender" value="Male" id="male" />
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" value="Female" id="female" />
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" value="Other" id="other" />
+                            <label for="other">Other</label>
+                        </div>
+                    </p>
+
+                    <p>
+                        <label>Skills:</label>
+                        <div class="input-group">
+                            <input type="checkbox" id="html-skill" value="HTML" />
+                            <label for="html-skill">HTML</label>
+                            <input type="checkbox" id="css-skill" value="CSS" />
+                            <label for="css-skill">CSS</label>
+                            <input type="checkbox" id="js-skill" value="JavaScript" />
+                            <label for="js-skill">JS</label>
+                        </div>
+                    </p>
+
+                    <p>
+                        <label for="country">Country:</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">Pakistan</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <input type="submit" id="submit" value="Submit" />
+                    </p>
+                </form>
+            </main>
+
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
