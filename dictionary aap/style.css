@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bcg-color: #f5f5f5;
+    --primary-color: #ffa8B6;
+    --padding: 20px;
+    --text-color: white;
+    --border-radius: 8px;
+}
+
+body {
+    background-color: var(--bcg-color);
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    color: var(--text-color);
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    min-height: 82vh;
+    width: 700px;
+    margin: 0 auto;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    /* padding: var(--padding); */
+    padding: 13px 5px;
+}
+
+form input[type='text'],
+form button[type='submit'],
+.result div a {
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: calc(var(--padding)/2);
+    border-radius: var(--border-radius);
+}
+
+form input[type='text'] {
+    flex-grow: 1;
+}
+
+form button[type='submit'] {
+    background-color: var(--primary-color);
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    text-align: center;
+    font-size: 19px;
+    position: fixed;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.result {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px var(--primary-color);
+    width: 700px;
+}
+
+.result p {
+    margin-top: 20px;
+}
+
+.result p[class='partsofspeech'] {
+    font-style: italic;
+    color: #808080;
+    margin-top: 2px;
+}
+
+.result div {
+    margin-top: 20px;
+}
+
+.result div a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.result li {
+    padding: calc(var(--padding)/6);
+    margin-left: 20px;
+}
+
+@media screen and (max-width:710px) {
+    main form {
+        flex-direction: column;
+    }
+
+    form button[type='submit'] {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .result {
+        /* margin-left: 10px; margin-right: 10px; */
+        width: 700px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+}

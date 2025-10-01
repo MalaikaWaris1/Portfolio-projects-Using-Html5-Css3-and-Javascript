@@ -1,0 +1,25 @@
+ body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .clock {
+      font-size: 60px;
+      letter-spacing: 5px;
+      border: 10px solid red;
+      border-radius: 10px ;
+    }
+
+    .labels {
+      margin-top: 10px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
