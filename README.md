@@ -89,12 +89,24 @@ Built with JavaScript for dynamic updates.
 A weather application using the **OpenWeather API**.
 Displays temperature, humidity, wind speed, and weather icons.
 
-
-         *********************************************************************************************Thnakyou so much**❤️😍**************************************************************************
-
-
-
 ## 🚀 How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/web-projects.git
+   git clone https://github.com/malaikapad/Portfolio-projects-Using-Html5-Css3-and-Javascript.git
+
+
+## Purpose
+These projects were created to practice HTML, CSS, and JavaScript fundamentals.
+They cover topics like:
+
+1-DOM Manipulation
+2-API usage
+3-CSS Flexbox & Grid
+4-Animations
+5-Forms and validation
+6-Basic JavaScript games
+
+✨ Feel free to explore each folder and modify the code!
+
+
+         ********************Thnakyou so much**❤️😍********************************
