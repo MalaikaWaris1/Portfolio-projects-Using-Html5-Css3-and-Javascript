@@ -1,0 +1,35 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      padding-top: 50px;
+      color: rgb(16, 194, 134);
+    }
+
+    .timer {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+ 
+
+    input {
+      width: 60px;
+      padding: 5px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+button:hover{
+    background-color: antiquewhite;
+}
+    #message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
