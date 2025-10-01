@@ -1,0 +1,54 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px 5px 20px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Input box */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Greeting message */
+#greeting, #message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+}

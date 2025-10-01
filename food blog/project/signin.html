@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /*signin page*/
+
+    body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to top left, #3ed8ff, #a8f5ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signin-box {
+            width: 400px;
+            padding: 40px;
+            background: linear-gradient(to top left, #ffffff, #ffffff33);
+            backdrop-filter: blur(8px);
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px #2773a5;
+        }
+
+        .signin-box h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #212121;
+        }
+
+        .signin-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .signin-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .signin-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .signin-box button:hover {
+            background-color: #2773a5;
+        }
+
+        .signin-box p {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .signin-box p a {
+            color: #2773a5;
+        }
+    
+</style>
+<body>
+    
+<div class="signin-box">
+    <h1>Sign In</h1>
+    <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if (!email || !password) {
+            alert('Please fill out both fields.🤔');
+            return;
+        }
+
+        // Basic email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // For now, just show success message (no real authentication)
+        alert('You logged in successfully!😊');
+        sessionStorage.setItem('isLoggedIn', true); // Store login status in session
+
+        window.location.href = 'index.html'; // Redirect to home page
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2de;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #search {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 50%;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #3d70b2;
+            border: 1px solid #aaa; /* Softer border color */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+
+            #search {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Profiles</h1>
+
+    <input type="text" id="search" placeholder="Search by name...">
+
+    <div id="userContainer" class="container"></div>
+
+<script>
+    const userContainer = document.getElementById('userContainer');
+    const searchInput = document.getElementById('search');
+
+    // Simulated extra fields
+    const courseTitles = ["Web Development", "Data Science", "Cyber Security", "AI", "Database Systems"];
+    const semesters = ["Spring 2025", "Fall 2024", "Summer 2025"];
+    const instructors = ["Dr. Ahmed", "Prof. Khan", "Ms. Ali", "Mr. Zain", "Mrs. Fatima"];
+
+    function getRandomItem(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function createUserCard(user) {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <p><strong>Name:</strong> ${user.name}</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Phone:</strong> ${user.phone}</p>
+            <p><strong>Course Title:</strong> ${getRandomItem(courseTitles)}</p>
+            <p><strong>Semester:</strong> ${getRandomItem(semesters)}</p>
+            <p><strong>Instructor:</strong> ${getRandomItem(instructors)}</p>
+            <p><strong>City:</strong> ${user.address.city}</p>
+      `;
+        return card;
+    }
+
+    function displayUsers(users) {
+        userContainer.innerHTML = '';
+        users.forEach(user => {
+            const card = createUserCard(user);
+            userContainer.appendChild(card);
+        });
+    }
+
+    // Fetch once and store users
+    let allUsers = [];
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+            allUsers = data.slice(0, 10);
+            displayUsers(allUsers);
+        })
+        .catch(error => console.error('Error fetching users:', error));
+
+    // Search functionality
+    searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        const filteredUsers = allUsers.filter(user =>
+            user.name.toLowerCase().includes(query)
+        );
+        displayUsers(filteredUsers);
+    });
+</script>
+
+</body>
+</html>

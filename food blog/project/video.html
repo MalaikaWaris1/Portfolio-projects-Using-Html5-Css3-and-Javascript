@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos page</title>
+    <link rel="stylesheet" href="recipies.css">
+    <style>
+        .h2 {
+            color: black;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        .video-section,
+        .interaction-section {
+            flex: 1 1 50%;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .video-section video {
+            width: 50%;
+            height: 400px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .interaction-section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .like-btn {
+            background-color: paleturquoise;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+            width: 100px;
+        }
+
+        .like-btn:hover {
+            background-color: #e60000;
+        }
+
+        .like-count {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .formsection {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: aqua;
+        }
+
+        form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            resize: none;
+            font-size: 14px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #388e3c;
+        }
+
+        /* Popup Styles */
+        .popup {
+            visibility: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup.active {
+            visibility: visible;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-bold-text banner-text">🥳 Delicious Adventures, Fresh from the Kitchen</div>
+        </div>
+    </div>
+    <nav>
+        <div class="container main-nav flex">
+            <p>Pinch <i>of</i> Yum</p>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li><a href="blog.html" class="hover-link">Blog</a></li>
+                    <li><a href="recipies.html" class="hover-link">Recipies</a></li>
+                    <li><a href="aboutme.html" class="hover-link">About</a></li>
+                    <li><a href="contactme.html" class="hover-link">Contact</a></li>
+                    <li><a href="signin.html" class="hover-link secondary-button">Sign in</a></li>
+                    <li><a href="signup.html" class="hover-link primary-button">Sign up</a></li>
+                </ul>
+            </div>
+            <!--<a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </a>-->
+        </div>
+        <hr>
+    </nav>
+
+
+    <div class="container">
+        <h2>Watch how to make BBQ Jackfruit Sandwiches</h2>
+        <div class="video-section">
+            <video controls="">
+                <source src="New folder/bbq jackfruit.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="interaction-section">
+            <button class="like-btn" id="likeBtn">🤍 Like</button>
+            <div class="like-count" id="likeCount">Likes: 0</div>
+        </div>
+        <div class="container">
+            <h2>Watch how to make Chicken Wontons in Spicy Chili Sauce</h2>
+            <div class="video-section">
+                <video controls="">
+                    <source src="New folder/chicken wontons.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="interaction-section">
+                <button class="like-btn" id="likeBtn">🤍 Like</button>
+                <div class="like-count" id="likeCount">Likes: 0</div>
+            </div>
+            <div class="container">
+                <h2>Watch how to make Steph's Chickpea Curry with Spinach and Rice</h2>
+                <div class="video-section">
+                    <video controls="">
+                        <source src="New folder/chikenpeas.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="interaction-section">
+                    <button class="like-btn" id="likeBtn">🤍 Like</button>
+                    <div class="like-count" id="likeCount">Likes: 0</div>
+                </div>
+                <div class="container">
+                    <h2>Watch how to make Honey Wings</h2>
+                    <div class="video-section">
+                        <video controls="">
+                            <source src="New folder/honey wing.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="interaction-section">
+                        <button class="like-btn" id="likeBtn">🤍 Like</button>
+                        <div class="like-count" id="likeCount">Likes: 0</div>
+                    </div>
+                    <div class="container">
+                        <h2>Watch how to make Spaghetti Zucchini</h2>
+                        <div class="video-section">
+                            <video controls="">
+                                <source src="New folder/zucchini.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div class="interaction-section">
+                            <button class="like-btn" id="likeBtn">🤍 Like</button>
+                            <div class="like-count" id="likeCount">Likes: 0</div>
+                        </div>
+                        <div class="container">
+                            <h2>Watch how to make Red Sauce Pasta</h2>
+                            <div class="video-section">
+                                <video controls="">
+                                    <source src="New folder/red soauce.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="interaction-section">
+                                <button class="like-btn" id="likeBtn">🤍 Like</button>
+                                <div class="like-count" id="likeCount">Likes: 0</div>
+                            </div>
+                            <div class="container">
+                                <h2>Watch how to make Seafood Pasta</h2>
+                                <div class="video-section">
+                                    <video controls="">
+                                        <source src="New folder/seafood pasta.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <div class="interaction-section">
+                                    <button class="like-btn" id="likeBtn">🤍 Like</button>
+                                    <div class="like-count" id="likeCount">Likes: 0</div>
+                                </div>
+                                <div class="container">
+                                    <h2>Watch how to make Curry Pakora</h2>
+                                    <div class="video-section">
+                                        <video controls="">
+                                            <source src="New folder/kury pokora.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <div class="interaction-section">
+                                        <button class="like-btn" id="likeBtn">🤍 Like</button>
+                                        <div class="like-count" id="likeCount">Likes: 0</div>
+                                    </div>
+                                    <div class="container">
+                                        <h2>Watch how to make Lobster Soup</h2>
+                                        <div class="video-section">
+                                            <video controls="">
+                                                <source src="New folder/lobuster soup.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+
+                                        <div class="interaction-section">
+                                            <button class="like-btn" id="likeBtn">🤍 Like</button>
+                                            <div class="like-count" id="likeCount">Likes: 0</div>
+                                        </div>
+                                        <div class="formsection">
+                                            <h2>Please give your feedback🔱</h2>
+                                            <form id="feedbackForm">
+                                                <textarea placeholder="Your feedback..." required=""></textarea>
+                                                <button type="submit">Send Feedback</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="popup" id="popup">
+                                        <p>Thank you for your feedback! 🙌</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>// Select all like buttons and like count divs
+const likeButtons = document.querySelectorAll('.like-btn');
+const likeCounts = document.querySelectorAll('.like-count');
+
+// Initialize individual counts for each video
+let counts = new Array(likeButtons.length).fill(0);
+
+// Attach event listeners to each button
+likeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        counts[index]++;
+        likeCounts[index].textContent = `Likes: ${counts[index]}`;
+    });
+});
+// Feedback popup handling
+    const feedbackForm = document.getElementById("feedbackForm");
+    const popup = document.getElementById("popup");
+
+    feedbackForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      popup.classList.add("active");
+      setTimeout(() => popup.classList.remove("active"), 3000);
+      feedbackForm.reset();
+    });
+</script>
+
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
+   <!--<div class="spacer" style="height: 100vh;">
+    </div>--> 
+</body>
+
+</html>
